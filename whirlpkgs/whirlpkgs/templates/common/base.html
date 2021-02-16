@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset='utf-8'/>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+
+        <meta name='application-name' content='Whirlwind package index'/>
+        <meta name='description' content='The Whirlwind package index and package documentation website'/>
+        <meta name='keywords' content='whirlwind programming language package packages documentation docs community index'/>
+
+        <link rel="icon" type="image/png" href="/static/common/images/favicon.png"/>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">   
+
+        {% block head %}{% endblock %}
+
+        <title>Whirlwind packages | {% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+        <footer>
+            Whirlwind Language and Logo Copyright &copy; Jordan Gaines 2018 - 2021
+        </footer>
+    </body>
+</html>
