@@ -1,7 +1,5 @@
 from django.urls import path
 
-from . import views
+from .util import route_table
 
-urlpatterns = [
-    path('/query', views.query, name='query')
-]
+urlpatterns = [path(pathname, func) for pathname, func in route_table.items()]
