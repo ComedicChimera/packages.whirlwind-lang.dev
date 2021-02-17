@@ -83,17 +83,17 @@ module.exports = apps.map((name) => {
         name: name,
         entry: {},
         output: {
-            path: path.join(__dirname, `whirlpkgs/${name}/static/${name}/js/dist/`),
+            path: path.join(__dirname, `whirlpkgs/${name}/static/${name}/dist/`),
             filename: `${name}.bundle.js`,
         }
     }
 
-    uniqueConfig['entry'][name] = `./whirlpkgs/${name}/static/${name}/js/src/app.js`
+    uniqueConfig['entry'][name] = `./whirlpkgs/${name}/static/${name}/src/app.js`
 
     let appConfig = Object.assign(uniqueConfig, config)
     appConfig['plugins'].push(
         new MiniCSSExtractPlugin({
-            filename: `whirlpkgs/${name}/static/${name}/css/dist/${name}.bundle.css`
+            filename: `whirlpkgs/${name}/static/${name}/dist/${name}.bundle.css`
         })
     )
 
