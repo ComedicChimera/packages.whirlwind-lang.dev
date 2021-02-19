@@ -1,16 +1,17 @@
 <script>
     import SearchDisplay from './components/SearchDisplay.svelte'
     import SearchBar from './components/SearchBar.svelte'
+
+    let query, errorMessage
 </script>
 
 <svelte:options tag="search-app"/>
 
 <div class="search-app">
     <div class="row">
-        <h1 class="display-1">whirlwind packages</h1>
-        <SearchBar></SearchBar>
+       <SearchBar bind:query={query} bind:errorMessage={errorMessage}></SearchBar>
     </div>
     <div class="row">
-        <SearchDisplay></SearchDisplay>
+        <SearchDisplay bind:query={query} bind:errorMessage={errorMessage}></SearchDisplay>
     </div>
 </div>
